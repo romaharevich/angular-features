@@ -1,3 +1,4 @@
 /node_modules
 /.idea
+/build
 angular features.iml

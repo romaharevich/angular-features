@@ -11,15 +11,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/home" class="navbar-brand">Angular Features</a>
+            <a href="#!/" class="navbar-brand">Angular Features</a>
         </div>
         <nav class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav">
-                <li ng-class="{active: $routeSegment.startsWith('form')}">
+                <li ng-class="{active: ('form' | routeSegmentStartsWith)}">
                     <a href="#!{{ 'form' | routeSegmentUrl}}">Form</a>
                 </li>
-                <li><a href="/1">Link</a></li>
-                <li><a href="/2">Link</a></li>
             </ul>
         </nav>
     </div>

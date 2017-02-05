@@ -21,11 +21,12 @@
                 default: true,
                 resolveFailed: error
             })
-            .within()
-                .segment('base', {
-                templateUrl: 'form/base/form.base.html',
-                resolveFailed: error
-            })
+                .within()
+                    .segment('base', {
+                    templateUrl: 'form/base/form.base.html',
+                    default: true,
+                    resolveFailed: error
+                })
             .up();
 
         $routeProvider.otherwise({redirectTo: '/form'});

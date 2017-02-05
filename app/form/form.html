@@ -1,2 +1,12 @@
-<h1>Forms</h1>
-<div app-view-segment="1"></div>
+<div class="row">
+    <div class="col-xs-4 col-md-2">
+        <ul class="nav nav-pills nav-stacked">
+            <li ng-class="{active: ('form.base' | routeSegmentStartsWith)}">
+                <a href="#!{{'form.base' | routeSegmentUrl}}">Base</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-xs-8 col-md-10">
+        <div app-view-segment="1"></div>
+    </div>
+</div>

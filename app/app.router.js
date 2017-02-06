@@ -14,17 +14,25 @@
         $routeSegmentProvider
             .when('/form', 'form')
             .when('/form/base', 'form.base')
+            .when('/form/angular', 'form.angular')
 
 
             .segment('form', {
                 templateUrl: 'form/form.html',
                 default: true,
+                controller: 'FormController',
                 resolveFailed: error
             })
-                .within()
-                    .segment('base', {
-                    templateUrl: 'form/base/form.base.html',
+            .within()
+                .segment('base', {
+                    templateUrl: 'form/base/base.form.html',
                     default: true,
+                    controller: 'BaseFormController',
+                    resolveFailed: error
+                })
+                .segment('angular', {
+                    templateUrl: 'form/angular/angular.form.html',
+                    controller: 'AngularFormController',
                     resolveFailed: error
                 })
             .up();

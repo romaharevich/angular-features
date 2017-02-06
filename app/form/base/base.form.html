@@ -4,7 +4,7 @@
     <br>
     <small class="form-text text-muted">All fields are required</small>
 </h2>
-<form name="form">
+<form name="form" ng-submit="submit()">
     <div class="row">
         <div ng-class="{'col-md-6': showInfo, 'col-md-12': !showInfo}">
             <div class="form-group">
@@ -46,7 +46,7 @@
                     Check me out
                 </label>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <input type="submit" class="btn btn-primary" value="Submit">
         </div>
         <div ng-show="showInfo" class="col-md-6">
             <pre>{{form | json}}</pre>

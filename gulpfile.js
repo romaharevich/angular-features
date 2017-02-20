@@ -1,7 +1,7 @@
 'use strict';
 
-var gulp = require('gulp');
-var concat = require('gulp-concat');
+const gulp = require('gulp');
+const concat = require('gulp-concat');
 
 const BUILD = {
     BASE: {

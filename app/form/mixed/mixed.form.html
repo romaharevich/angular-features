@@ -47,6 +47,14 @@
                 </label>
             </div>
             <input type="submit" class="btn btn-primary" value="Submit">
+            <input type="reset"
+                   class="btn btn-default"
+                   value="Reset"
+                   ng-click="reset()">
+            <input type="button"
+                   ng-click="invalidate()"
+                   class="btn btn-default"
+                   value="Invalidate">
         </div>
         <div ng-show="showInfo" class="col-md-6">
             <pre>{{data | json}}</pre>

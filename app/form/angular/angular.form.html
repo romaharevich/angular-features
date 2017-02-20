@@ -4,7 +4,7 @@
     <br>
     <small class="form-text text-muted">All fields are required</small>
 </h2>
-<ng-form name="form">
+<ng-form name="form" ng-submit="attemptToSubmit()">
     <div class="row">
         <div ng-class="{'col-md-6': showInfo, 'col-md-12': !showInfo}">
             <div class="form-group">
@@ -46,7 +46,19 @@
                     Check me out
                 </label>
             </div>
-            <input type="submit" class="btn btn-primary" ng-disabled="form.$invalid" ng-click="submit()" value="Submit">
+            <input type="submit"
+                   class="btn btn-primary"
+                   value="Submit"
+                   ng-disabled="form.$invalid"
+                   ng-click="submit()">
+            <input type="reset"
+                   class="btn btn-default"
+                   value="Reset"
+                   ng-click="reset()">
+            <input type="reset"
+                   class="btn btn-default"
+                   value="Invalidate"
+                   ng-click="invalidate()">
         </div>
         <div ng-show="showInfo" class="col-md-6">
             <pre>{{data | json}}</pre>

@@ -15,6 +15,7 @@
             .when('/form', 'form')
             .when('/form/base', 'form.base')
             .when('/form/angular', 'form.angular')
+            .when('/form/mixed', 'form.mixed')
 
 
             .segment('form', {
@@ -33,6 +34,11 @@
                 .segment('angular', {
                     templateUrl: 'form/angular/angular.form.html',
                     controller: 'AngularFormController',
+                    resolveFailed: error
+                })
+                .segment('mixed', {
+                    templateUrl: 'form/mixed/mixed.form.html',
+                    controller: 'MixedFormController',
                     resolveFailed: error
                 })
             .up();

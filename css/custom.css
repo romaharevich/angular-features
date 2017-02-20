@@ -11,3 +11,22 @@
 .theme-showcase .navbar .container {
     width: auto;
 }
+
+.ng-valid {
+    border-color: #59FF00;
+}
+.ng-invalid {
+    border-color: #FF0000;
+}
+.ng-pending {
+    border-color: #DEA9FF;
+}
+.ng-pristine {
+    border-color: #7DB1FF;
+}
+.ng-dirty {
+    border-color: #002C6E;
+}
+.ng-submitted {
+    border-color: #A7A500;
+}

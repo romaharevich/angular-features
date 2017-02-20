@@ -7,6 +7,9 @@
             <li ng-class="{active: ('form.angular' | routeSegmentStartsWith)}">
                 <a href="#!{{'form.angular' | routeSegmentUrl}}">Angular</a>
             </li>
+            <li ng-class="{active: ('form.mixed' | routeSegmentStartsWith)}">
+                <a href="#!{{ 'form.mixed' | routeSegmentUrl}}">Mixed</a>
+            </li>
         </ul>
     </div>
     <div class="col-xs-8 col-md-10">

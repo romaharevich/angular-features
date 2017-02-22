@@ -16,6 +16,7 @@
             .when('/form/base', 'form.base')
             .when('/form/angular', 'form.angular')
             .when('/form/mixed', 'form.mixed')
+            .when('/form/multiple', 'form.multiple')
 
 
             .segment('form', {
@@ -41,7 +42,12 @@
                     controller: 'MixedFormController',
                     resolveFailed: error
                 })
-            .up();
+                .segment('multiple', {
+                    templateUrl: 'form/multiple/multiple.form.html',
+                    controller: 'MultipleFormController',
+                    resolveFailed: error
+                })
+                .up();
 
         $routeProvider.otherwise({redirectTo: '/form'});
     }

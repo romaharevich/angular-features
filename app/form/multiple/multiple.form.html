@@ -1,0 +1,32 @@
+<h2>
+    Mixed form
+    <i ng-click="showInfo = !showInfo" class="fa fa-info-circle" style="cursor: pointer"></i>
+</h2>
+
+<ng-form name="pureForm">
+    <input form="formId" id="pureInputId" name="pureInput" ng-model="data.other" required>
+</ng-form>
+<br>
+
+<form name="form" id="formId" ng-submit="submit()">
+    <div ng-class="{'col-md-6': showInfo, 'col-md-12': !showInfo}">
+        <div class="form-group">
+            <label for="f">Main Form</label>
+            <input type="text" class="form-control" required id="f" ng-model="data.formValue">
+        </div>
+        <div ng-form="form1" class="form-group">
+            <label for="f1">Form 1</label>
+            <input type="text" class="form-control" required id="f1" ng-model="data.form1Value">
+        </div>
+        <div ng-form="form2" class="form-group">
+            <label for="f2">Form 2</label>
+            <input type="text" class="form-control" required id="f2" ng-model="data.form2Value">
+        </div>
+        <input type="submit" class="btn btn-primary" value="Submit">
+        <input type="button" class="btn btn-default" ng-click="bindToForm()" value="Bind">
+    </div>
+    <div ng-show="showInfo" class="col-md-6">
+        <pre>{{data | json}}</pre>
+        <pre>{{form | json}}</pre>
+    </div>
+</form>

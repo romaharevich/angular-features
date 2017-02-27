@@ -36,7 +36,7 @@
 </h2>
 <form name="custom" ng-submit="submitted3 = true">
     <label for="oneCharacter3">Text</label>
-    <input type="text" id="oneCharacter3" name="text2" ng-model="data3.text" custom-validation required>
+    <input type="text" id="oneCharacter3" name="text3" ng-model="data3.text" custom-validation required>
 
     <button type="submit">Submit</button>
 </form>
@@ -45,3 +45,21 @@
 <div>Valid: {{custom.$valid}}</div>
 
 <pre>{{data3 | json}}</pre>
+
+<hr>
+
+<h2>
+    Custom Async Validation
+</h2>
+<form name="async" ng-submit="submitted3 = true">
+    <label for="oneCharacter4">Text</label>
+    <input type="text" id="oneCharacter4" name="text4" ng-model="data4.text" custom-async-validation required>
+
+    <button type="submit">Submit</button>
+</form>
+<div ng-show="async.$pending">I'm in pending</div>
+<div>Submitted: {{async.$submitted}}</div>
+<div>Ng-submit: {{submitted3}}</div>
+<div>Valid: {{async.$valid}}</div>
+
+<pre>{{data4 | json}}</pre>

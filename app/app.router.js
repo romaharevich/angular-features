@@ -19,7 +19,6 @@
             .when('/form/multiple', 'form.multiple')
             .when('/form/validator', 'form.validator')
 
-
             .segment('form', {
                 templateUrl: 'form/form.html',
                 default: true,

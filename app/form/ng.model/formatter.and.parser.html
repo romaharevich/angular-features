@@ -1,0 +1,12 @@
+<h2>
+    Formatter and Parser
+</h2>
+
+<form name="form" ng-submit="save()">
+    <input ng-model="data" required custom-formatter custom-parser>
+
+    <button>Save</button>
+</form>
+
+<hr>
+Exact Data: {{exactData}}

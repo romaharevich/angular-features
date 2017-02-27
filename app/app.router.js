@@ -18,6 +18,7 @@
             .when('/form/mixed', 'form.mixed')
             .when('/form/multiple', 'form.multiple')
             .when('/form/validator', 'form.validator')
+            .when('/form/formatterAndParser', 'form.formatterAndParser')
 
             .segment('form', {
                 templateUrl: 'form/form.html',
@@ -50,6 +51,16 @@
                 .segment('validator', {
                     templateUrl: 'form/validator/validator.html',
                     controller: 'ValidatorController',
+                    resolveFailed: error
+                })
+                .segment('formatterAndParser', {
+                    templateUrl: 'form/ng.model/formatter.and.parser.html',
+                    controller: 'FormatterAndParserController',
+                    resolve: {
+                        data: ['DataService', function(DataService) {
+                            return DataService.get();
+                        }]
+                    },
                     resolveFailed: error
                 })
                 .up();

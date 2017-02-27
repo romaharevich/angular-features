@@ -1,0 +1,47 @@
+<h2>
+    Angular Validation
+</h2>
+<form name="angularValidation" ng-submit="submitted = true">
+    <label for="oneCharacter">Text</label>
+    <input type="text" ng-pattern="'\\d'" id="oneCharacter" name="text" ng-model="data.text" required>
+
+    <button type="submit">Submit</button>
+</form>
+<div>Submitted: {{angularValidation.$submitted}}</div>
+<div>Ng-submit: {{submitted}}</div>
+<div>Valid: {{angularValidation.$valid}}</div>
+
+<pre>{{data | json}}</pre>
+<hr>
+
+<h2>
+    HTML5 Validation
+</h2>
+<form name="html5Validation" ng-submit="submitted2 = true">
+    <label for="oneCharacter2">Text</label>
+    <input type="text" pattern="\d" id="oneCharacter2" name="text2" ng-model="data2.text" required>
+
+    <button type="submit">Submit</button>
+</form>
+<div>Submitted: {{html5Validation.$submitted}}</div>
+<div>Ng-submit: {{submitted2}}</div>
+<div>Valid: {{html5Validation.$valid}}</div>
+
+<pre>{{data2 | json}}</pre>
+
+<hr>
+
+<h2>
+    Custom Validation
+</h2>
+<form name="custom" ng-submit="submitted3 = true">
+    <label for="oneCharacter3">Text</label>
+    <input type="text" id="oneCharacter3" name="text2" ng-model="data3.text" custom-validation required>
+
+    <button type="submit">Submit</button>
+</form>
+<div>Submitted: {{custom.$submitted}}</div>
+<div>Ng-submit: {{submitted3}}</div>
+<div>Valid: {{custom.$valid}}</div>
+
+<pre>{{data3 | json}}</pre>

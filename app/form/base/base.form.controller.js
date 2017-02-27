@@ -1,6 +1,6 @@
 'use strict';
 
-(function () {
+(function() {
     angular.module('app').controller('BaseFormController', BaseFormController);
 
     BaseFormController.$inject = ['$scope'];

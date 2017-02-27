@@ -17,6 +17,7 @@
             .when('/form/angular', 'form.angular')
             .when('/form/mixed', 'form.mixed')
             .when('/form/multiple', 'form.multiple')
+            .when('/form/validator', 'form.validator')
 
 
             .segment('form', {
@@ -45,6 +46,11 @@
                 .segment('multiple', {
                     templateUrl: 'form/multiple/multiple.form.html',
                     controller: 'MultipleFormController',
+                    resolveFailed: error
+                })
+                .segment('validator', {
+                    templateUrl: 'form/validator/validator.html',
+                    controller: 'ValidatorController',
                     resolveFailed: error
                 })
                 .up();
